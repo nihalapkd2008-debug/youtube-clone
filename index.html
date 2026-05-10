@@ -6,7 +6,397 @@
 
     <title>Nihala Portfolio</title>
 
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: cursive, Arial, Helvetica, sans-serif;
+
+        background: linear-gradient(to bottom right, #ffeaea, #d2c8ff, #5178ac);
+
+        color: #1e293b;
+      }
+
+      /* NAVBAR */
+
+      nav {
+        position: sticky;
+        top: 0;
+
+        width: 100%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        background-color: white;
+
+        padding: 1rem 2rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        z-index: 1000;
+
+        border-bottom: 1px solid #d8b4fe;
+      }
+
+      nav h1 {
+        font-size: 1.6rem;
+        color: #db2777;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+
+        color: #334155;
+
+        padding: 0.6rem 1rem;
+
+        border-radius: 30px;
+
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        background-color: #c4b5fd;
+        color: white;
+      }
+
+      /* HERO */
+
+      .hero {
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 2rem;
+
+        text-align: center;
+      }
+
+      .hero-content {
+        background-color: rgba(255, 255, 255, 0.25);
+
+        padding: 3rem;
+
+        border-radius: 40px;
+
+        width: 100%;
+        max-width: 900px;
+      }
+
+      .hero img {
+        width: 190px;
+        height: 190px;
+
+        border-radius: 50%;
+
+        object-fit: cover;
+
+        border: 6px solid white;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+        margin-bottom: 1.5rem;
+      }
+
+      .hero h2 {
+        font-size: 4rem;
+
+        margin-bottom: 0.7rem;
+        color: #db2777;
+      }
+
+      .hero h3 {
+        color: #2563eb;
+
+        margin-bottom: 1rem;
+
+        font-size: 1.5rem;
+      }
+
+      .hero p {
+        line-height: 1.9;
+
+        color: #475569;
+
+        font-size: 1.1rem;
+        text-align: center;
+
+        margin-bottom: 2rem;
+        max-width: 750px;
+        margin: auto;
+      }
+
+      .hero-btn {
+        text-decoration: none;
+
+        background: linear-gradient(to right, #a855f7, #ec4899);
+
+        color: white;
+
+        padding: 1rem 2rem;
+
+        border-radius: 50px;
+
+        display: inline-block;
+
+        transition: 0.3s;
+      }
+
+      .hero-btn:hover {
+        transform: translateY(-4px) scale(1.03);
+      }
+
+      /* COMMON SECTION */
+
+      .section {
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 5rem 2rem;
+      }
+
+      .section-content {
+        max-width: 1100px;
+        width: 100%;
+      }
+
+      .section h2 {
+        font-size: 3rem;
+
+        margin-bottom: 2rem;
+
+        text-align: center;
+
+        color: #db2777;
+      }
+
+      /* ABOUT */
+
+      .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 3rem;
+
+        flex-wrap: wrap;
+      }
+      .fullname {
+        color: #db2777;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+      .about-image img {
+        width: 320px;
+
+        border-radius: 34px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .about-text {
+        max-width: 500px;
+        text-align: left;
+      }
+
+      .about-text p {
+        line-height: 2;
+
+        color: #475569;
+
+        font-size: 1.1rem;
+      }
+
+      /* SKILLS */
+
+      .skills-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        width: 60%;
+        margin: auto;
+      }
+
+      .skill {
+        background: linear-gradient(to right, #a855f7, #ec4899);
+
+        color: white;
+
+        padding: 1rem 1.5rem;
+
+        border-radius: 40px;
+
+        font-weight: bold;
+
+        transition: 0.3s;
+      }
+
+      .skill:hover {
+        transform: scale(1.08);
+      }
+
+      /* WORK */
+
+      .work-links {
+        display: flex;
+        flex-direction: column;
+
+        gap: 1rem;
+
+        max-width: 500px;
+
+        margin: 2rem auto 0;
+      }
+
+      .work-links a {
+        text-decoration: none;
+
+        background: white;
+
+        color: #7c3aed;
+
+        padding: 1rem;
+
+        border-radius: 18px;
+
+        text-align: center;
+
+        font-weight: bold;
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+        transition: 0.3s;
+      }
+
+      .work-links a:hover {
+        transform: translateY(-4px);
+        background: #f5d0fe;
+      }
+
+      /* EDUCATION */
+
+      .education-box {
+        background: rgba(255, 255, 255, 0.6);
+
+        padding: 2rem;
+
+        border-radius: 25px;
+
+        backdrop-filter: blur(10px);
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+        max-width: 700px;
+
+        margin: auto;
+
+        text-align: center;
+
+        margin-bottom: 2rem;
+      }
+
+      .education-box p {
+        line-height: 2;
+
+        color: #475569;
+
+        font-size: 1.1rem;
+      }
+
+      /* FOOTER */
+
+      footer {
+        background: #7c3aed;
+
+        color: white;
+
+        padding: 3rem 2rem;
+
+        text-align: center;
+      }
+
+      .footer-container {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .footer-container h2 {
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 1rem;
+
+        margin: 1.5rem 0;
+      }
+
+      .footer-links a {
+        text-decoration: none;
+
+        color: white;
+
+        background-color: rgba(255, 255, 255, 0.2);
+
+        padding: 0.7rem 1.2rem;
+
+        border-radius: 30px;
+
+        transition: 0.3s;
+      }
+
+      .footer-links a:hover {
+        background-color: white;
+        color: #7c3aed;
+      }
+
+      footer p {
+        margin-top: 1rem;
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .hero h2 {
+          font-size: 2.5rem;
+        }
+
+        .section h2 {
+          font-size: 2.2rem;
+        }
+
+        .about-image img {
+          width: 100%;
+          max-width: 320px;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -105,12 +495,15 @@
         <div class="work-links">
           <a href="https://github.com/" target="_blank"> 💻 GitHub Projects </a>
 
-          <a href="https://nihalapkd2008-debug.github.io/day5/" target="_blank">
+          <a
+            href=" https://nihalapkd2008-debug.github.io/day5/"
+            target="_blank"
+          >
             Aesthetica
           </a>
 
           <a
-            href="https://nihalapkd2008-debug.github.io/Biography/"
+            href=" https://nihalapkd2008-debug.github.io/Biography/"
             target="_blank"
           >
             My Bio
@@ -157,5 +550,58 @@
         <p>© 2026 Nihala Nasreen Bahira</p>
       </div>
     </footer>
+
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.",
+        );
+      }
+      // ]]>
+    </script>
   </body>
 </html>
