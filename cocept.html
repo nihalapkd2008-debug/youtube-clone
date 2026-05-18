@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css concepts</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+  <body>
+
+    <div class="container">
+
+      <!-- HEADER -->
+
+
+      <section>
+
+        <h1>Advanced CSS Concepts Task</h1>
+
+        <p>
+          This task demonstrates important CSS concepts including
+          specificity conflicts, overflow handling, opacity overlays,
+          stacking layers, and responsive max-width layouts.
+        </p>
+
+        <p>
+          The design is fully responsive and adjusts beautifully
+          on mobile, tablet, and desktop screens.
+        </p>
+
+      </section>
+
+      <!-- SPECIFICITY SECTION -->
+
+
+      <section class="conflict-section">
+
+        <h2>1) CSS Conflict Fixed Using Specificity</h2>
+
+        <p class="highlight">
+          This text becomes crimson because the selector
+          ".conflict-section .highlight"
+          has higher specificity than normal paragraph selectors.
+        </p>
+
+        <p>
+          CSS conflicts happen when multiple styles try to affect
+          the same element. The browser checks specificity rules
+          to decide which style should win.
+        </p>
+
+        <div class="code-box">
+
+          p { color: blue; } <br><br>
+
+          .highlight { color: green; } <br><br>
+
+          .conflict-section .highlight { color: crimson; }
+
+        </div>
+
+      </section>
+
+      <!-- SCROLLABLE SECTION
+     -->
+
+      <section>
+
+        <h2>2) Scrollable Content Section</h2>
+
+        <p>
+          This section uses overflow-y:auto to create a clean
+          vertical scrolling experience when content exceeds
+          the fixed container height.
+        </p>
+
+        <div class="scroll-box">
+
+          <h3>Scrollable Article</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quaerat doloremque sed commodi maiores saepe.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam magni rem nemo inventore.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Accusantium earum fuga ipsa.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptate, unde doloremque!
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque ipsa aliquid placeat accusamus.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Tempora quae ducimus pariatur.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Earum ratione beatae maiores.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Eveniet officiis asperiores magni.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- OVERLAY SECTION
+     -->
+
+      <section>
+
+        <h2>3) Opacity Based Overlay Section</h2>
+         
+        <div class="overlay-section">
+
+          <div class="overlay"></div>
+
+          <div class="overlay-content">
+           
+            <h1>Discover Beautiful Nature</h1>
+
+            <p>
+              This hero section uses an opacity-based overlay
+              to improve text visibility over the background image.
+              The dark transparent layer creates a modern cinematic look.
+            </p>
+
+            <button class="overlay-btn">
+              Explore More
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+      <!-- 
+         RESPONSIVE CARDS -->
+
+
+      <section>
+
+        <h2>4) Responsive Max-Width Layout</h2>
+
+        <p>
+          The entire layout uses max-width and flexible sizing
+          techniques to remain responsive across all screen sizes.
+        </p>
+
+        <div class="card-wrapper">
+
+          <div class="card">
+
+            <h3>Responsive Design</h3>
+
+            <p>
+              Elements automatically resize and adjust
+              depending on the available screen width.
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <h3>Flexible Layout</h3>
+
+            <p>
+              Flexbox and max-width help create layouts
+              that work beautifully on mobile devices.
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <h3>Modern UI</h3>
+
+            <p>
+              Rounded corners, overlays, shadows,
+              and spacing improve user experience.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </body>
+
+</html>
